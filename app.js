@@ -23,3 +23,7 @@ http.createServer(function (req, res) {
     res.end();
 
 }).listen(80); // 127.0.0.1の80番ポートで待機
+
+ process.on('SIGTERM', () => {
+     console.log('Got SIGTERM');
+ });
