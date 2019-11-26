@@ -24,6 +24,11 @@ http.createServer(function (req, res) {
 
 }).listen(80); // 127.0.0.1の80番ポートで待機
 
+function intervalFunc() {
+  console.log('Cant stop me now!');
+}
+
  process.on('SIGTERM', () => {
      console.log('Got SIGTERM');
+     setInterval(intervalFunc, 1000);
  });
