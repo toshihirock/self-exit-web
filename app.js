@@ -22,7 +22,7 @@ http.createServer(function (req, res) {
     res.write(msg);
     res.end();
 
-}).listen(80); // 127.0.0.1の80番ポートで待機
+}).listen(80); // listen 127.0.0.1:80
 
 function intervalFunc() {
   console.log('Cant stop me now!');
